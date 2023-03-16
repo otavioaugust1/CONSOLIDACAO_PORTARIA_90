@@ -27,7 +27,7 @@ Para utilizar o bot, siga as instruções abaixo:
 3. Realize o download dos planos no SAIPS (arquivo. xlsx)
 4. Renomeie as planilhas com o nome das UF (ex. BAHIA, SÃO PAULO, entre outros)
 5. Insira as planilhas na pasta "BASE"
-6. Execute o script utilizando o comando "python consolidar.ipynb"
+6. Execute o script utilizando o comando python "consolidar.ipynb" 
 7. Aguarde o término da execução do script
 8. A base consolidada com todas as planilhas (.xlsx) estará na pasta "PLANILHA"
 
