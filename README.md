@@ -2,7 +2,7 @@
 
 ![Badge em Desenvolvimento](https://img.shields.io/static/v1?label=STATUS&message=FINALIZADO&color=GREEN&style=for-the-badge)
 
-![GitHub Org's stars](https://img.shields.io/github/stars/camilafernanda?style=social)
+![GitHub Org's stars](https://img.shields.io/github/stars/otavioaugust1?style=social)
 
 O objetivo deste bot é consolidar as planilhas de cirurgias eletivas enviadas de acordo com a Portaria 90, verificando se os dados estão em conformidade com as exigências da portaria.
 
