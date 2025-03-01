@@ -1,59 +1,66 @@
-# 🛠️ Bot consolidador de planilhas de cirurgias eletivas
+# CONSOLIDACAO_PORTARIA_90
 
-![Badge em Desenvolvimento](https://img.shields.io/static/v1?label=STATUS&message=FINALIZADO&color=GREEN&style=for-the-badge)
+Este projeto é responsável por consolidar dados relacionados à **Portaria 90**, gerando relatórios e arquivos consolidados para auxiliar na gestão e análise das informações.
 
-![GitHub Org's stars](https://img.shields.io/github/stars/otavioaugust1?style=social)
+## Sobre a Portaria 90
 
-O objetivo deste bot é consolidar as planilhas de cirurgias eletivas enviadas de acordo com a Portaria 90, verificando se os dados estão em conformidade com as exigências da portaria.
+A **Portaria GM/MS nº 90, de 6 de fevereiro de 2023**, estabelece diretrizes e critérios para a organização e funcionamento das redes de atenção à saúde no âmbito do Sistema Único de Saúde (SUS). Ela define normas e procedimentos para a implementação de políticas públicas de saúde, com foco na melhoria da qualidade e eficiência dos serviços prestados.
+
+Para mais detalhes, consulte o texto oficial da Portaria 90:
+- [Portaria GM/MS nº 90, de 6 de fevereiro de 2023](https://bvs.saude.gov.br/bvs/saudelegis/gm/2023/prt0090_06_02_2023.html)
 
 ## Funcionalidades
 
-* Leitura das planilhas da pasta especificada
-* Consolidação dos dados em um único DataFrame
-* Verificação da conformidade dos dados com a Portaria 90
-* Renomeação e exclusão de colunas e linhas desnecessárias
+- **Consolidação de Dados**: Junta várias planilhas ou bases de dados em um único arquivo.
+- **Geração de Relatórios**: Gera relatórios com base nos dados consolidados.
 
-## Requisitos
+## Como Usar
+### Pré-requisitos
 
-Para utilizar o bot, é necessário ter os seguintes requisitos instalados:
-* Python 3.x
-* Bibliotecas pandas, time, os, locale e xlsxwriter
+- Python 3 instalado.
+- Instale as dependências:
 
-## Como utilizar
+```bash
+  pip install -r requirements.txt
+```
 
-Para utilizar o bot, siga as instruções abaixo:
-1. Faça o download ou clone este repositório
-2. Abra o terminal e navegue até a pasta do repositório
-3. Realize o download dos planos no SAIPS (arquivo. xlsx)
-4. Renomeie as planilhas com o nome das UF (ex. BAHIA, SÃO PAULO, entre outros)
-5. Insira as planilhas na pasta "APROVADO" , as UF aprovadas via SAIPS
-6. Insira as planilhas na pasta "NAO_APROVADO", as UF que estão esperando aprovação
-7. Execute o script utilizando o comando python "consolidar.ipynb" 
-8. Aguarde o término da execução do script
-9. A base consolidada com todas as planilhas (.xlsx) estará na pasta "PLANILHA"
+## Executando o Projeto
+1. Clone o repositório:
 
-# Resultado
+```bash
+git clone https://github.com/otavioaugust1/CONSOLIDACAO_PORTARIA_90.git
+cd CONSOLIDACAO_PORTARIA_90
+```
+2. Coloque os arquivos brutos na pasta data/raw.
+3. Execute o projeto:
 
-Ao final da execução do script, serão gerados 9 arquivos:
-* 1 arquivo '.xlsx' com o nome "BASE_APROVADA" com 3 abas
-* 1 arquivo '.csv' com o nome "BASE_APROVADA" as informações da primeira aba 
-* 1 arquivo '.csv' com o nome "BASE_APROVADA" as informações da segunda aba 
-* 1 arquivo '.csv' com o nome "BASE_APROVADA" as informações da terceira aba 
+``` bash
+python main.py
+```
+## Estrutura do Projeto
+```
+consolidacao_portaria_90/
+├── docs/                     # Documentação do projeto
+├── src/                      # Código-fonte
+│   ├── controller/           # Lógica de controle
+│   ├── models/               # Lógica de banco de dados
+│   ├── views/                # Interface gráfica
+│   ├── utils/                # Utilitários
+│   └── app/                  # Configuração da aplicação
+├── data/                     # Dados brutos e tratados
+│   ├── raw/                  # Dados brutos baixados ou recebidos
+│   ├── processed/            # Dados tratados
+│   └── results/              # Resultados da consolidação
+├── tests/                    # Testes
+├── README.md                 # Documentação principal
+├── requirements.txt          # Dependências do projeto
+├── .gitignore                # Arquivos ignorados pelo Git
+└── main.py                   # Ponto de entrada do projeto
+```
 
-* 1 arquivo '.xlsx' com o nome "BASE_NAO_APROVADA" com 3 abas
-* 1 arquivo '.csv' com o nome "BASE_NAO_APROVADA" as informações da primeira aba 
-* 1 arquivo '.csv' com o nome "BASE_NAO_APROVADA" as informações da segunda aba 
-* 1 arquivo '.csv' com o nome "BASE_NAO_APROVADA" as informações da terceira aba 
+## Contribuição
+Sinta-se à vontade para contribuir com melhorias ou correções. Abra uma issue ou envie um pull request!
 
-* 1 arquivo '.xlsx' com o nome "BASE_GERAL" com 3 abas
-* 1 arquivo '.csv' com o nome "BASE_GERAL" as informações da primeira aba 
-* 1 arquivo '.csv' com o nome "BASE_GERAL" as informações da segunda aba 
-* 1 arquivo '.csv' com o nome "BASE_GERAL" as informações da terceira aba 
+## Licença
+Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
 
-## Observações
-* Certifique-se de que todas as planilhas estejam no formato ".xlsx"
-* Certifique-se de que as planilhas estejam na pasta especificada
-* Este bot foi desenvolvido em Jupyter Notebook, mas pode ser executado em qualquer ambiente Python 3.x
-* Este projeto está sob a licença MIT License.
-
- 
